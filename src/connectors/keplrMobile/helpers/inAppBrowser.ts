@@ -3,7 +3,8 @@ export const isInKeplrMobileAppBrowser = (): boolean => {
     return false
   }
 
-  const isKeplrMobileApp = window.keplr !== undefined
+  const userAgent = navigator.userAgent
+  const isKeplrMobileApp = userAgent.includes("KeplrWalletMobile")
 
   if (!isKeplrMobileApp) {
     return false
