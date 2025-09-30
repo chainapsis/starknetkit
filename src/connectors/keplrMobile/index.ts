@@ -22,6 +22,8 @@ import { KEPLR_MOBILE_APP_ICON } from "./constants"
 import { isInKeplrMobileAppBrowser } from "./helpers/inAppBrowser"
 
 export class KeplrMobileBaseConnector extends Connector {
+  private _wallet: StarknetWindowObject | null = null
+
   constructor() {
     super()
   }
